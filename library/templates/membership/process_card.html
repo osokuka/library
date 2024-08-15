@@ -1,0 +1,28 @@
+<div class="col-lg-6">
+  <div class="card mb-4">
+      <div class="card-body">
+          <h5 class="mb-4">Process Details</h5>
+          {% for process in processes %}
+              <div class="process-item mb-4">
+                  <h6>Process {{ forloop.counter }}</h6>
+                  <div class="p-3 mb-3 bg-light shadow-sm rounded">
+                      <p class="mb-0"><strong>First Contact:</strong> {{ process.first_contact.method }} on {{ process.first_contact.date }}</p>
+                  </div>
+                  <div class="p-3 mb-3 bg-light shadow-sm rounded">
+                      <p class="mb-0"><strong>Mentor Assigned:</strong> {{ process.mentor_assigned }}</p>
+                  </div>
+                  <div class="p-3 mb-3 bg-light shadow-sm rounded">
+                      <p class="mb-0"><strong>Interview Date:</strong> {{ process.interview_date }}</p>
+                  </div>
+                  <div class="p-3 mb-3 bg-light shadow-sm rounded">
+                      <p class="mb-0"><strong>Final Vote:</strong> {{ process.final_vote }}</p>
+                  </div>
+                  <div class="p-3 mb-3 bg-light shadow-sm rounded">
+                      <p class="mb-0"><strong>Date of Initiation:</strong> {{ process.date_of_initiation }}</p>
+                  </div>
+                  <hr>
+              </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>

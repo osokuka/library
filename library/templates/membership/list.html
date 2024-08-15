@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Members</h1>
+    <ul class="list-group">
+        {% for member in members %}
+            <li class="list-group-item">{{ member.name }} ({{ member.dob }})</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Processes</h1>
+    <ul class="list-group">
+        {% for process in processes %}
+            <li class="list-group-item">Process for {{ process.member.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
